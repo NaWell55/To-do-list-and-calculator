@@ -47,13 +47,15 @@ elif (yas < 90) and (yas > 9):
             6-Karekök Alma
             Seçiminiz: """)
             if islemsecim == "1":
-                print(sayi1 + sayi1)
+                print(sayi1 + sayi2)
             elif islemsecim == "2":
                 print(sayi1 - sayi2)
             elif islemsecim == "3":
                 print(sayi1 * sayi2)
             elif islemsecim == "4":
                 print(sayi1 / sayi2)
+                if sayi1 or sayi2 == 0:
+                    print("0'a bölemezsin")
             elif islemsecim == "5":
                 print(sayi1 ** sayi2)
             elif islemsecim == "6":
