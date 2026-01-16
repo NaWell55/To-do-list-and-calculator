@@ -2,9 +2,9 @@ import math
 
 isim = input("İsminizi Girin: ")
 yas = int(input("Yaşınızı Girin: "))
-if (yas > 90) and (yas < 9):
+if (yas > 90) or (yas < 9):
     print("Lütfen gerçek yaşınızı giriniz")
-elif (yas < 90) and (yas > 9):
+elif (yas < 90) or (yas > 9):
     print("Hoşgeldin " + isim.title() + " " + "Yaşın: " + str(yas))
     while True:
         print("""\n--- MENÜ ---
@@ -53,7 +53,11 @@ elif (yas < 90) and (yas > 9):
             elif islemsecim == "3":
                 print(sayi1 * sayi2)
             elif islemsecim == "4":
-                print(sayi1 / sayi2)
+                if sayi1 or sayi2 == 0:
+                    print("0'a bölemezsin")
+                else:
+                    print(sayi1 / sayi2)
+
                 if sayi1 or sayi2 == 0:
                     print("0'a bölemezsin")
             elif islemsecim == "5":
